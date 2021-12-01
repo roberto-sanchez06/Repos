@@ -42,13 +42,14 @@ namespace ExamenDos
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.RegistrarAsignatura = new System.Windows.Forms.Button();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.nudSist = new System.Windows.Forms.NumericUpDown();
+            this.nudPrimerp = new System.Windows.Forms.NumericUpDown();
+            this.nud2doParcial = new System.Windows.Forms.NumericUpDown();
+            this.lblClase = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSist)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPrimerp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud2doParcial)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNombre
@@ -159,39 +160,64 @@ namespace ExamenDos
             this.RegistrarAsignatura.Name = "RegistrarAsignatura";
             this.RegistrarAsignatura.Size = new System.Drawing.Size(196, 23);
             this.RegistrarAsignatura.TabIndex = 14;
-            this.RegistrarAsignatura.Text = "RegistrarAsignatura";
+            this.RegistrarAsignatura.Text = "RegistrarNOta";
             this.RegistrarAsignatura.UseVisualStyleBackColor = true;
             this.RegistrarAsignatura.Click += new System.EventHandler(this.RegistrarAsignatura_Click);
             // 
-            // numericUpDown1
+            // nudSist
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(647, 141);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(221, 20);
-            this.numericUpDown1.TabIndex = 15;
+            this.nudSist.Location = new System.Drawing.Point(647, 141);
+            this.nudSist.Maximum = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
+            this.nudSist.Name = "nudSist";
+            this.nudSist.Size = new System.Drawing.Size(221, 20);
+            this.nudSist.TabIndex = 15;
             // 
-            // numericUpDown2
+            // nudPrimerp
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(647, 167);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(221, 20);
-            this.numericUpDown2.TabIndex = 16;
+            this.nudPrimerp.Location = new System.Drawing.Point(647, 167);
+            this.nudPrimerp.Maximum = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.nudPrimerp.Name = "nudPrimerp";
+            this.nudPrimerp.Size = new System.Drawing.Size(221, 20);
+            this.nudPrimerp.TabIndex = 16;
             // 
-            // numericUpDown3
+            // nud2doParcial
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(647, 207);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(221, 20);
-            this.numericUpDown3.TabIndex = 17;
+            this.nud2doParcial.Location = new System.Drawing.Point(647, 207);
+            this.nud2doParcial.Maximum = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.nud2doParcial.Name = "nud2doParcial";
+            this.nud2doParcial.Size = new System.Drawing.Size(221, 20);
+            this.nud2doParcial.TabIndex = 17;
+            // 
+            // lblClase
+            // 
+            this.lblClase.AutoSize = true;
+            this.lblClase.Location = new System.Drawing.Point(746, 41);
+            this.lblClase.Name = "lblClase";
+            this.lblClase.Size = new System.Drawing.Size(33, 13);
+            this.lblClase.TabIndex = 18;
+            this.lblClase.Text = "Clase";
+            this.lblClase.Click += new System.EventHandler(this.lblClase_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(746, 41);
+            this.label5.Location = new System.Drawing.Point(507, 141);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(33, 13);
-            this.label5.TabIndex = 18;
-            this.label5.Text = "Clase";
+            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "label5";
             // 
             // FrmEstudiante
             // 
@@ -199,9 +225,10 @@ namespace ExamenDos
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(933, 450);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.numericUpDown3);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.lblClase);
+            this.Controls.Add(this.nud2doParcial);
+            this.Controls.Add(this.nudPrimerp);
+            this.Controls.Add(this.nudSist);
             this.Controls.Add(this.RegistrarAsignatura);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
@@ -218,9 +245,9 @@ namespace ExamenDos
             this.Name = "FrmEstudiante";
             this.Text = "FrmEstudiante";
             this.Load += new System.EventHandler(this.FrmEstudiante_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSist)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPrimerp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud2doParcial)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,9 +268,10 @@ namespace ExamenDos
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button RegistrarAsignatura;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.NumericUpDown nudSist;
+        private System.Windows.Forms.NumericUpDown nudPrimerp;
+        private System.Windows.Forms.NumericUpDown nud2doParcial;
+        private System.Windows.Forms.Label lblClase;
         private System.Windows.Forms.Label label5;
     }
 }
